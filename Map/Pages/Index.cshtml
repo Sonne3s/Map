@@ -1,0 +1,65 @@
+﻿@page
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/utils/enum.js"></script>
+    <script src="js/utils/css-rules-manager.js"></script>
+    <script src="js/desktop/canvas/mouse/dots-manager.js"></script>
+    <script src="js/desktop/canvas/mouse/render.js"></script>
+    <script src="js/desktop/canvas/mouse/draw.js"></script>
+    <script src="js/desktop/canvas/mouse/pointer.js"></script>
+    <script src="js/desktop/canvas/mouse.js"></script>
+    <script src="js/desktop/canvas.js"></script> 
+    <script src="js/desktop/mouse-panel/buttons.js"></script>
+    <script src="js/desktop/mouse-panel.js"></script>
+    <script src="js/desktop/details-panel.js"></script>
+    <script src="js/desktop/details-panel/draw-section.js"></script>
+    <script src="js/desktop/details-panel/draw-section/inputs.js"></script>
+    <script src="js/desktop/objects-panel.js"></script>
+    <script src="js/desktop/details-panel/pointer-section.js"></script>   
+    <script src="js/desktop.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="item">Создать</div>
+        <div class="item">Загрузить с диска</div>
+        <div class="item">Загрузить из профиля</div>
+    </div>
+    <div class="desktop" id="desktop">
+        <div class="screen">
+            <div class="v-ruler">
+            </div>
+            <div class="h-ruler">
+            </div>
+            <svg class="canvas draw-mode" id="canvas" xmlns="http://www.w3.org/2000/svg" ondragstart="return false;">
+            </svg>
+        </div>
+        <div class="panels-section" ondragstart="return false;">
+            <div class="mouse-panel panel" id="mouse-panel">
+                <div class="item" id="draw-button">Ру</div>
+                <div class="item" id="pointer-button">Па</div>
+            </div>
+            <div class="details-panel panel" id="details-panel">
+                <div class="draw-section" id="details-draw-section">
+                    <div class="group">
+                        <input type="checkbox" id="is-discreet-drow" name="is-discreet-drow" checked>
+                        <input type="number" id="discreet-drow-value" name="discreet-drow-value" step="1" min="1" max="100">
+                    </div>                    
+                    <input type="range" id="discreet-drow-value-range" name="discreet-drow-value-range" min="1" max="100">
+                </div>
+                <div class="pointer-section" id="details-pointer-section">
+                    <div id="object-id"></div>
+                    <div id="point-id"></div>
+                    <div id="point-x"></div>
+                    <div id="point-y"></div>
+                </div>
+            </div>
+            <div class="objects-panel panel">
+
+            </div>
+        </div>
+    </div>
+</body>
